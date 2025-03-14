@@ -393,7 +393,7 @@ def initialize_session_state():
             "conversation_history": [],
             "messages": []
         }
-    
+    print(st.session_state.context)
     if 'agent_network' not in st.session_state:
         st.session_state.agent_network = build_agent_network()
 
@@ -669,7 +669,7 @@ def process_user_message(user_message: str, agent_status_placeholder=None):
         # Handle errors with fallback
         try:
             fallback_response = client.messages.create(
-                model="claude-3-sonnet-20240229",
+                model="claude-3-7-sonnet-20250219",
                 max_tokens=2000,
                 system="You are a helpful supply chain assistant.",
                 messages=[{"role": "user", "content": user_message}]
