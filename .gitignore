@@ -1,0 +1,12 @@
+# Ignore a specific file
+api key anthropic.txt
+
+# Ignore all files with a specific extension
+*.log
+
+# Ignore an entire directory
+node_modules/
+
+# Ignore all files in a directory except specific ones
+logs/*
+!logs/.gitkeep
